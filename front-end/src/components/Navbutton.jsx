@@ -1,17 +1,26 @@
-import { Link, NavLink } from "react-router-dom"
+import { useState, useRef, useEffect } from "react"
+import { NavLink } from "react-router-dom"
 
-const Navbutton = ({ pageLink }) => {
+const Navbutton = ({ pageLink, imgName }) => {
+    pageLink.replace(" ","")
+    const [pageLinkTMP,setpageLinkTMP] = useState(pageLink)
+    useEffect(() => {
+        setpageLinkTMP(pageLink.replace(" ",""))
+    },[pageLink])
     return (
         <>
-            {
-                (location.pathname == "/") ?
-                    <li className="rounded-2xl my-4" >
-                        <NavLink className={`w-full h-full nav-link py-3 rounded-2xl pl-3 inline-block active`} to={pageLink}>{pageLink.charAt(0).toUpperCase() + pageLink.slice(1)}</NavLink>
-                    </li> :
-                    <li className="rounded-2xl my-4" >
-                        <NavLink className={`w-full h-full nav-link py-3 rounded-2xl pl-3 inline-block`} to={pageLink}>{pageLink.charAt(0).toUpperCase() + pageLink.slice(1)}</NavLink>
-                    </li>
-            }
+            <li className="rounded-2xl my-4 flex items-center" >
+
+                <NavLink className={`w-full h-full flex gap-3 nav-link py-3 rounded-2xl pl-3`} to={pageLinkTMP == "dashboard" ? "/" : pageLinkTMP}>
+                    <div>
+                        <div className="img">
+                            <img src={imgName} alt="" />
+                        </div>
+                    </div>
+                    {pageLink.charAt(0).toUpperCase() + pageLink.slice(1)}
+                </NavLink>
+
+            </li>
         </>
 
     )

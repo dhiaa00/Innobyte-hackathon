@@ -13,7 +13,7 @@ function App() {
           <div className="left w-52">
             <Nav />
           </div>
-          <div className="right">
+          <div className="right w-full">
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
