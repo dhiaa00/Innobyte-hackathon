@@ -17,7 +17,7 @@ class Guest(models.Model):
     nationality = models.CharField(max_length=255)
 
 class Payment(models.Model):
-    booking = models.ForeignKey('Booking', on_delete=models.CASCADE)
+    booking = models.OneToOneField('Booking', on_delete=models.PROTECT)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     payment_date = models.DateTimeField()
     payment_method = models.CharField(max_length=255)
@@ -30,7 +30,7 @@ class RoomType(models.Model):
 
 class Room(models.Model):
     status = models.CharField(max_length=255)
-    type = models.ForeignKey(RoomType, on_delete=models.CASCADE)
+    type = models.ForeignKey(RoomType, on_delete=models.PROTECT)
 
 class Booking(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
