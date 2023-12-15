@@ -3,6 +3,8 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
 import Header from './components/Header'
 import Home from './pages/Home'
+import Bookings from './pages/Bookings'
+import Rooms from './pages/Rooms'
 
 function App() {
 
@@ -17,6 +19,8 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/bookings" element={<Bookings/>} />
+              <Route path="/rooms" element={<Rooms/>} />
             </Routes>
           </div>
         </div>

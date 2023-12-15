@@ -10,7 +10,7 @@ const Home = () => {
       <div className='px-6'>
         <PageTitle title="Dashboard" />
         <div className='flex'>
-          <FlexibleCart bgColor="linear-gradient(109deg, #608AF5 0.01%, #1E5EFF 99.98%);" img={bed} title="Occupancy" type="dynamic" info={{number: 47,total : 230}}/>
+          <FlexibleCart bgColor="linear-gradient(109deg, #608AF5 0.01%, #1E5EFF 99.98%);" img={bed} title="Occupancy" type="dynamic" info={{number: 47,total : 230,percentage: 20}}/>
         </div>
       </div>
     </>
