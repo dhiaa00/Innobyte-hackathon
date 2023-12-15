@@ -37,14 +37,14 @@ class RoomType(models.Model):
 class Room(models.Model):
     room_number = models.IntegerField()
     status = models.CharField(max_length=255)
-    type = models.ForeignKey(RoomType, on_delete=models.PROTECT)
+    type = models.ForeignKey(RoomType,related_name = 'rooms', on_delete=models.PROTECT)
 
     def __str__(self):
         return 'room ' + str(self.room_number)
 
 class Booking(models.Model):
-    room = models.ForeignKey(Room, on_delete=models.CASCADE)
-    guest = models.ForeignKey(Guest, on_delete=models.CASCADE)
+    room = models.ForeignKey(Room,related_name = 'bookings' , on_delete=models.CASCADE)
+    guest = models.ForeignKey(Guest,related_name = 'bookings', on_delete=models.CASCADE)
     total_price = models.DecimalField(max_digits=10, decimal_places=2)
     check_in = models.DateTimeField()
     check_out = models.DateTimeField()

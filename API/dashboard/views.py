@@ -6,7 +6,7 @@ from .serializers import BookingSerializer, GuestSerializer, PaymentSerializer, 
 
 # Create your views here.
 class GuestViewSet(viewsets.ModelViewSet):
-    queryset = Guest.objects.all()
+    queryset = Guest.objects.prefetch_related('bookings').all()
     serializer_class = GuestSerializer
 
 class PaymentViewSet(viewsets.ModelViewSet):
@@ -14,13 +14,13 @@ class PaymentViewSet(viewsets.ModelViewSet):
     serializer_class = PaymentSerializer
 
 class RoomTypeViewSet(viewsets.ModelViewSet):
-    queryset = RoomType.objects.all()
+    queryset = RoomType.objects.prefetch_related('rooms').all()
     serializer_class = RoomTypeSerializer
 
 class RoomViewSet(viewsets.ModelViewSet):
-    queryset = Room.objects.all()
+    queryset = Room.objects.prefetch_related('bookings').all()
     serializer_class = RoomSerializer
 
 class BookingViewSet(viewsets.ModelViewSet):
-    queryset = Booking.objects.all()
+    queryset = Booking.objects.prefetch_related().all()
     serializer_class = BookingSerializer
