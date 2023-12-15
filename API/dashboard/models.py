@@ -16,6 +16,9 @@ class Guest(models.Model):
     email = models.CharField(max_length=255)
     nationality = models.CharField(max_length=255)
 
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name
+
 class Payment(models.Model):
     booking = models.OneToOneField('Booking', on_delete=models.PROTECT)
     amount = models.DecimalField(max_digits=10, decimal_places=2)
@@ -28,9 +31,16 @@ class RoomType(models.Model):
     price_per_night = models.DecimalField(max_digits=10, decimal_places=2)
     capacity = models.IntegerField()
 
+    def __str__(self):
+        return self.name
+
 class Room(models.Model):
+    room_number = models.IntegerField()
     status = models.CharField(max_length=255)
     type = models.ForeignKey(RoomType, on_delete=models.PROTECT)
+
+    def __str__(self):
+        return 'room ' + str(self.room_number)
 
 class Booking(models.Model):
     room = models.ForeignKey(Room, on_delete=models.CASCADE)
@@ -40,3 +50,8 @@ class Booking(models.Model):
     check_out = models.DateTimeField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+
+    def __str__(self):
+        guest = self.guest.first_name + ' ' + self.guest.last_name
+        room = 'room ' + str(self.room.room_number)
+        return guest + ' ' + room
