@@ -21,7 +21,7 @@ const Home = () => {
           <FlexibleCart bgColor="linear-gradient(109deg, #608AF5 0.01%, #1E5EFF 99.98%);" img={vecteur} title="Housekeeping" type="dynamic" info={{ number: 20, total: 230, percentage: 37 }} />
           <div className="flex w-full gap-2 my-3">
             <div className='text-black w-[47%] bg-white px-6'>
-              <p className='border-l-4 pl-4 border-l-black my-3 font-bold text-2xl'>Latest reviews</p>
+              <p className='border-l-4 pl-4 border-l-black my-3 font-bold text-2xle'>Latest reviews</p>
               <Comments />
               <Comments />
               <Comments />
