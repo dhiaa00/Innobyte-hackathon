@@ -2,7 +2,7 @@ import React from 'react'
 import PageTitle from '../components/PageTitle'
 import FlexibleCart from '../components/FlexibleCart'
 import bed from "../assets/images/Vector (8).svg"
-import elepse from "../assets/images/vector.png"
+import elepse from "../assets/images/Vector.png"
 import vecteur from "../assets/images/Vector (1).png"
 import FlexibleCartBlack from '../components/FlexibleCartBlack'
 import Comments from '../components/Comments'
