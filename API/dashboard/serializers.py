@@ -1,6 +1,16 @@
 from rest_framework import serializers
-from .models import Booking, Guest, Payment, Room, RoomType
+from .models import Booking, Guest, Payment, Room, RoomType, Shift, Staff
 
+
+class StaffSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Staff
+        fields = ['id', 'first_name', 'last_name', 'date_of_birth', 'phone', 'fingerprint']
+
+class ShiftSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Shift
+        fields = ['id', 'staff', 'start_time', 'end_time']
         
 class PaymentSerializer(serializers.ModelSerializer):
     class Meta:
@@ -16,13 +26,13 @@ class GuestSerializer(serializers.ModelSerializer):
     bookings = BookingSerializer(many=True, read_only=True)
     class Meta:
         model = Guest
-        fields = ['id', 'first_name', 'last_name', 'email', 'phone', 'address', 'nationality', 'date_of_birth', 'bookings']
+        fields = ['id', 'first_name', 'last_name', 'email', 'phone', 'address', 'id_card', 'family_book', 'nationality', 'date_of_birth', 'bookings']
         
 class RoomSerializer(serializers.ModelSerializer):
     bookings = BookingSerializer(many=True, read_only=True)
     class Meta:
         model = Room
-        fields = ['id', 'status', 'type', 'bookings']
+        fields = ['id', 'status', 'type', 'extra_bed', 'bookings']
 
         read_only_fields = ['booking_set']
 

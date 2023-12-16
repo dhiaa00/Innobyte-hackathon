@@ -3,8 +3,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
 import Header from './components/Header'
 import Home from './pages/Home'
+import Booking from './pages/Booking'
 
 function App() {
+
+  
 
   return (
     <>
@@ -17,6 +20,7 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
+              <Route path="/checkin" element={<Booking />} />
             </Routes>
           </div>
         </div>
