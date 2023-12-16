@@ -14,6 +14,9 @@ class Staff(models.Model):
     phone = models.CharField(max_length=255)
     fingerprint = models.ImageField(upload_to='images/fingerprint', null=True, blank=True)
 
+    def __str__(self):
+        return self.first_name + ' ' + self.last_name
+
 class Shift(models.Model):
     staff = models.ForeignKey(Staff, related_name = 'shifts', on_delete=models.PROTECT)
     start_time = models.DateTimeField()
