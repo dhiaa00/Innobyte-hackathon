@@ -24,7 +24,7 @@ const Header = () => {
         <div className="img-profile">
           <img src={avatar} alt="avatar" className='w-10 rounded-full' />
         </div>
-        <h3>Samir</h3>
+        <h3>John Doe</h3>
         <div className="img">
           <img src={downAngle} alt="" className={`rotate-${toggle * 180} `} onClick={() => {settoggle(!toggle)}}/>
         </div>

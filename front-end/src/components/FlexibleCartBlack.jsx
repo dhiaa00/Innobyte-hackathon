@@ -4,7 +4,7 @@ import arrowBottom from '../assets/images/angle-small-down 1.svg'
 
 const FlexibleCartBlack = ({ bgColor, img, title, info }) => {
     return (
-        <div className="md:w-72 p-6" style={{ background: 'linear-gradient(108deg, #45454A -0.08%, #24213C 89.86%)' }}>
+        <div className="md:w-64 p-6 rounded-lg" style={{ background: 'linear-gradient(108deg, #45454A -0.08%, #24213C 89.86%)' }}>
             <div className={`flex gap-2 ${bgColor} mb-5`} >
                 <div className="img">
                     <img src={img} alt="img" />

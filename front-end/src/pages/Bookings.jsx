@@ -6,6 +6,7 @@ import xIcon from "../assets/images/serbas.png"
 import plusIcon from "../assets/images/Group 87.svg"
 import BlackBones from '../components/BlackBones'
 
+
 const Bookings = () => {
   const [familyNoteBook, setFamilyNoteBook] = useState(false)
   const handleChange = (e) => {
@@ -47,7 +48,7 @@ const Bookings = () => {
             <div className='flex justify-between items-center'>
               <div className='flex flex-col items-start gap-3 w-[30%]'>
                 <label className='font-bold' htmlFor="extraBed">Extra Bed</label>
-                <select name="extra-bed" id="extraBed" className='py-2 bg-[#F0F3F8] w-[60%]' style={{
+                <select name="extra-bed" id="extraBed" className='py-2 pl-3 bg-[#F0F3F8] w-[60%]' style={{
                   border: "0.782px solid #686D96", boxShadow: "0px 3.908px 25.191px -15.423px rgba(0, 0, 0, 0.68);"
 
                 }}>
@@ -57,7 +58,7 @@ const Bookings = () => {
               </div>
               <div className='flex flex-col items-start gap-3 w-[30%]'>
                 <label className='font-bold' htmlFor="family">With Family</label>
-                <select onChange={(e) => { handleChange(e) }} name="family" id="family" className='py-2 bg-[#F0F3F8] w-[60%]' style={{
+                <select onChange={(e) => { handleChange(e) }} name="family" id="family" className='pl-3 py-2 bg-[#F0F3F8] w-[60%]' style={{
                   border: "0.782px solid #686D96", boxShadow: "0px 3.908px 25.191px -15.423px rgba(0, 0, 0, 0.68);"
 
                 }}>
@@ -67,7 +68,7 @@ const Bookings = () => {
               </div>
               <div className='flex flex-col items-start gap-3 w-[30%]'>
                 <label className='font-bold' htmlFor="familyNoteBook">View</label>
-                <select name="family" id="family" className='py-2 bg-[#F0F3F8] w-full' style={{
+                <select name="family" id="family" className='py-2 pl-2 bg-[#F0F3F8] w-full' style={{
                   border: "0.782px solid #686D96", boxShadow: "0px 3.908px 25.191px -15.423px rgba(0, 0, 0, 0.68);"
 
                 }}>
@@ -80,7 +81,7 @@ const Bookings = () => {
 
               <div className='flex flex-col items-start gap-3 w-[30%]'>
                 <label className='font-bold' htmlFor="roomType">Room Type</label>
-                <select name="roomType" id="roomType" className='py-2 bg-[#F0F3F8] w-[60%]' style={{
+                <select name="roomType" id="roomType" className='py-2 pl-3 bg-[#F0F3F8] w-[60%]' style={{
                   border: "0.782px solid #686D96", boxShadow: "0px 3.908px 25.191px -15.423px rgba(0, 0, 0, 0.68);"
 
                 }}>
@@ -91,7 +92,7 @@ const Bookings = () => {
               </div>
               <div className='flex flex-col items-start gap-3 w-[30%]'>
                 <label className='font-bold' htmlFor="familyNoteBook">From</label>
-                <input name='from' className='focus:outline-none pl-2 w-full py-2 bg-[#F0F3F8]' type="date" style={{
+                <input name='from' className='pl-3 focus:outline-none pl-2 w-full py-2 bg-[#F0F3F8]' type="date" style={{
                   border: "0.782px solid #686D96", boxShadow: "0px 3.908px 25.191px -15.423px rgba(0, 0, 0, 0.68);"
 
                 }} id='familyNoteBook' />
@@ -108,7 +109,7 @@ const Bookings = () => {
             <div className='flex justify-between items-center'>
               <div className='flex flex-col items-start gap-3 w-[30%]'>
                 <label className='font-bold' htmlFor="familyNoteBook">Family NootBook</label>
-                <input disabled={!familyNoteBook} id='familyNoteBook' type="file" className="block w-full text-sm text-gray-500
+                <input disabled={!familyNoteBook} id='familyNoteBook' type="file" className="block  w-full text-sm text-gray-500
                   file:me-4 file:py-2 file:px-4
                   file:rounded-lg file:border-0
                   file:text-sm file:font-semibold
@@ -133,7 +134,7 @@ const Bookings = () => {
                 "/>
               </div>
               <div className='flex flex-col items-start gap-3 w-[30%]' style={{ visibility: "hidden" }}>
-                <label className='font-bold' htmlFor="to">To</label>
+                <label className='font-bold pl-3' htmlFor="to">To</label>
                 <input type="file" name="to" id="to" class="block w-full border border-gray-200 shadow-sm rounded-lg text-sm focus:z-10 focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-slate-900 dark:border-gray-700 dark:text-gray-400 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600
                        file:border-0
                       file:bg-gray-100 file:me-4
@@ -141,7 +142,7 @@ const Bookings = () => {
                       "></input>
               </div>
             </div>
-            <p>Total : <b>220$</b></p>
+            <p>Total : <b>0$</b></p>
             <div className='flex flex-col gap-2'>
               {spa && <div className='flex gap-2'>
 

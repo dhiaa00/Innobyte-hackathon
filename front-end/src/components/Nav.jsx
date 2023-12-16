@@ -11,7 +11,7 @@ import hotelIcon from "../assets/images/Vector (7).svg"
 
 const Nav = () => {
   return (
-    <nav className='bg-[#222032]  h-screen relative w-52 p-4 text-white'>
+    <nav className='bg-[#222032]  h-full relative w-52 p-4 text-white'>
         <Profile/>
         <div className='mt-8'>
           <h3>Menu</h3>
