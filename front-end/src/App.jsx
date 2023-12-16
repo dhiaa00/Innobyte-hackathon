@@ -3,11 +3,11 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Nav from './components/Nav'
 import Header from './components/Header'
 import Home from './pages/Home'
-import Bookings from './pages/Bookings'
-import Rooms from './pages/Rooms'
-import Clients from './pages/Clients'
+import Booking from './pages/Booking'
 
 function App() {
+
+  
 
   return (
     <>
@@ -20,9 +20,7 @@ function App() {
             <Header />
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/bookings" element={<Bookings/>} />
-              <Route path="/rooms" element={<Rooms/>} />
-              <Route path="/clients" element={<Clients/>} />
+              <Route path="/checkin" element={<Booking />} />
             </Routes>
           </div>
         </div>
