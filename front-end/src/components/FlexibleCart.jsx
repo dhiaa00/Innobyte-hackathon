@@ -3,7 +3,6 @@ import arrowBottom from '../assets/images/angle-small-down 1.svg'
 import { useState } from 'react'
 
 const FlexibleCart = ({bgColor, img, title, type, desc, info }) => {
-    const [toggle, settoggle] = useState(false)
 
 
 

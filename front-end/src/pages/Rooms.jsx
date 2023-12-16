@@ -29,7 +29,10 @@ const Rooms = () => {
                     <Room id="101" />
                     <Room id="102" />
                     <Room id="103" />
-                    <UniqueRoom id="104" />
+                    {/* <UniqueRoom id="104" /> */}
+                    <Room id="104" />
+                    <Room id="105" />
+                    <Room id="106" />
                     <Room id="106" />
                 </div>
             </div>

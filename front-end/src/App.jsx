@@ -5,6 +5,7 @@ import Header from './components/Header'
 import Home from './pages/Home'
 import Bookings from './pages/Bookings'
 import Rooms from './pages/Rooms'
+import Clients from './pages/Clients'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/bookings" element={<Bookings/>} />
               <Route path="/rooms" element={<Rooms/>} />
+              <Route path="/clients" element={<Clients/>} />
             </Routes>
           </div>
         </div>

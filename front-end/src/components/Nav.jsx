@@ -20,9 +20,7 @@ const Nav = () => {
             <Navbutton pageLink="bookings" imgName={bookings}/>
             <Navbutton pageLink="rooms" imgName={folderIcon}/>
             <Navbutton pageLink="clients" imgName={rooms}/>
-            <Navbutton pageLink="statistics" imgName={statisticsIcon}/>
-            <Navbutton pageLink="pricing" imgName={clients}/>
-            <Navbutton pageLink="hotel" imgName={hotelIcon}/>
+            
           </ul>
         </div>
     </nav>
