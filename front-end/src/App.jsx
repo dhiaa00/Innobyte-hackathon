@@ -12,8 +12,8 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <div className="main-flex flex">
-          <div className="left w-52">
+        <div className="main-flex flex min-h-full">
+          <div className="left w-52 h-full">
             <Nav />
           </div>
           <div className="right w-full">
